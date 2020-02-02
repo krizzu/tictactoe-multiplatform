@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/text_gameMode"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorText"
+        android:text="@string/game_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@id/text_gameMode"
+        app:layout_constraintRight_toLeftOf="@id/button_vsCpu"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/button_vsHuman"
+        android:text="@string/game_vsHuman"
+        android:backgroundTint="@color/colorDarkGrey"
+        android:textColor="@color/colorTextDark"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp" />
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@id/text_gameMode"
+        app:layout_constraintLeft_toRightOf="@id/button_vsHuman"
+        app:layout_constraintRight_toRightOf="parent"
+        android:backgroundTint="@color/colorDarkGrey"
+        android:textColor="@color/colorTextDark"
+        android:id="@+id/button_vsCpu"
+        android:text="@string/game_vsCpu"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

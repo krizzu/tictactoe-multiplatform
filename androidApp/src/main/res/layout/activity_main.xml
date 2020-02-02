@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="4dp"
+    tools:context="dev.krizzu.tictactoe.androidApp.views.MainActivity">
+
+
+    <TextView
+        android:id="@+id/app_title"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorText"
+        android:fontFamily="@font/roboto_bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <TextView
+        android:id="@+id/app_description"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/app_description"
+        android:textColor="@color/colorText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_title" />
+
+
+    <fragment
+        app:layout_constraintTop_toBottomOf="@id/app_description"
+        android:id="@+id/gameMode_fragment"
+        android:tag="@string/game_mode"
+        android:name="dev.krizzu.tictactoe.androidApp.views.GameTypeSelectFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <fragment
+        android:id="@+id/playerSign_fragment"
+        app:layout_constraintTop_toBottomOf="@id/gameMode_fragment"
+        android:tag="@string/game_playAs"
+        android:name="dev.krizzu.tictactoe.androidApp.views.SignSelectFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:id="@+id/button_startGame"
+        app:layout_constraintTop_toBottomOf="@id/playerSign_fragment"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="12dp"
+        android:text="@string/game_Start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <fragment
+        android:layout_marginTop="20dp"
+        android:id="@+id/gameBoard_fragment"
+        android:name="dev.krizzu.tictactoe.androidApp.views.GameBoardFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/button_startGame"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/text_gameResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/gameBoard_fragment"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/colorText"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

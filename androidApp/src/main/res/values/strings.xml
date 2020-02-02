@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Tic-Tac-Toe</string>
+    <string name="app_description">Kotlin MPP example</string>
+
+    <string name="game_mode">Game mode:</string>
+    <string name="game_playAs">Play as:</string>
+    <string name="game_vsHuman">vs Human</string>
+    <string name="game_vsCpu">vs CPU</string>
+    <string name="game_Start">Start Game</string>
+
+    <string name="game_X">X</string>
+    <string name="game_O">O</string>
+</resources>

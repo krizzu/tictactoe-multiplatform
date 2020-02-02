@@ -1,0 +1,82 @@
+import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
+
+plugins {
+    id "org.jetbrains.kotlin.multiplatform"
+    id "com.android.library"
+}
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        minSdkVersion 21
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+
+        }
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/androidMain/kotlin'
+        main.manifest.source = 'src/androidMain/AndroidManifest.xml'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+kotlin {
+    android()
+
+    js {
+        def outDestination = new File(rootProject.rootDir.toString() + "/docs/")
+
+        browser {
+            runTask {
+                destinationDirectory = outDestination
+                devServer = new KotlinWebpackConfig.DevServer(true, false, true, true, false, 8080, [:], [outDestination.toString()])
+            }
+
+            webpackTask {
+                destinationDirectory = outDestination
+            }
+        }
+    }
+
+    sourceSets {
+        jsMain {
+            dependencies {
+                implementation kotlin("stdlib-js")
+            }
+        }
+        jsTest {
+            dependencies {
+                implementation kotlin('test-js')
+            }
+        }
+        commonMain {
+            dependencies {
+                implementation kotlin('stdlib-common')
+            }
+        }
+        commonTest {
+            dependencies {
+                implementation kotlin('test-common')
+                implementation kotlin('test-annotations-common')
+            }
+        }
+    }
+}
+
+// for android target
+dependencies {
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7'
+    testImplementation 'org.jetbrains.kotlin:kotlin-test'
+    testImplementation 'org.jetbrains.kotlin:kotlin-test-junit'
+}

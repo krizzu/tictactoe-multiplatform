@@ -1,0 +1,62 @@
+<head>
+    <title>TicTacToe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<h1>Tic Tac Toe</h1>
+<p>Kotlin MPP example</p>
+
+<div id="game-controls">
+
+    <h3>Game mode:</h3>
+    <div id="vs-type-select" class="game-type-select">
+        <input type="radio" id="vs-human" name="vs-type" value="human" checked>
+        <label for="vs-human">vs Human</label>
+
+        <input type="radio" id="vs-cpu" name="vs-type" value="cpu">
+        <label for="vs-cpu">vs CPU</label>
+
+        <div id="player-sign-select" class="game-type-select">
+            <h3>Play as:</h3>
+
+            <input type="radio" id="player-sign-o" name="player-sign" value="O" checked>
+            <label for="player-sign-o">O</label>
+
+            <input type="radio" id="player-sign-x" name="player-sign" value="X">
+            <label for="player-sign-x">X</label>
+        </div>
+    </div>
+
+    <button id="game-start-button">Start game</button>
+
+</div>
+
+
+<div id="game-content">
+    <div id="game-board">
+        <div class="row">
+            <div id="0" class="playField"></div>
+            <div id="1" class="playField"></div>
+            <div id="2" class="playField"></div>
+        </div>
+        <div class="row">
+            <div id="3" class="playField"></div>
+            <div id="4" class="playField"></div>
+            <div id="5" class="playField"></div>
+        </div>
+        <div class="row">
+            <div id="6" class="playField"></div>
+            <div id="7" class="playField"></div>
+            <div id="8" class="playField"></div>
+        </div>
+    </div>
+
+</div>
+<h3 id="announcer"></h3>
+
+
+</body>
+<script src="shared.js"></script>

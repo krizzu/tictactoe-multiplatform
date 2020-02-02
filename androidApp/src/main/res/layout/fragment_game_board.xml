@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/colorBackgroundGameBoard"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_gameBoard"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+
+        <Button
+            android:tag="0"
+            android:id="@+id/field_1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:backgroundTint="@color/colorTextDark"
+            android:textColor="@color/colorText"
+            android:textSize="28sp"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/field_2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:tag="1"
+            android:id="@+id/field_2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:backgroundTint="@color/colorTextDark"
+            android:textColor="@color/colorText"
+            android:textSize="28sp"
+            app:layout_constraintLeft_toRightOf="@id/field_1"
+            app:layout_constraintRight_toLeftOf="@id/field_3"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+        <Button
+            android:tag="2"
+            android:id="@+id/field_3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:backgroundTint="@color/colorTextDark"
+            android:textColor="@color/colorText"
+            android:textSize="28sp"
+            app:layout_constraintLeft_toRightOf="@id/field_2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:tag="3"
+            android:id="@+id/field_4"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:backgroundTint="@color/colorTextDark"
+            android:textColor="@color/colorText"
+            android:textSize="28sp"
+            app:layout_constraintTop_toBottomOf="@id/field_1"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/field_2" />
+
+        <Button
+            android:tag="4"
+            android:id="@+id/field_5"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:backgroundTint="@color/colorTextDark"
+            android:textColor="@color/colorText"
+            android:textSize="28sp"
+            app:layout_constraintTop_toBottomOf="@id/field_2"
+            app:layout_constraintLeft_toRightOf="@id/field_4"
+            app:layout_constraintRight_toLeftOf="@id/field_6" />
+
+        <Button
+            android:tag="5"
+            android:id="@+id/field_6"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:backgroundTint="@color/colorTextDark"
+            android:textColor="@color/colorText"
+            android:textSize="28sp"
+            app:layout_constraintTop_toBottomOf="@id/field_3"
+            app:layout_constraintLeft_toRightOf="@id/field_5"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <Button
+            android:tag="6"
+            android:id="@+id/field_7"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:backgroundTint="@color/colorTextDark"
+            android:textColor="@color/colorText"
+            android:textSize="28sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/field_4"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintRight_toLeftOf="@id/field_8" />
+
+        <Button
+            android:tag="7"
+            android:id="@+id/field_8"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:backgroundTint="@color/colorTextDark"
+            android:textColor="@color/colorText"
+            android:textSize="28sp"
+            app:layout_constraintTop_toBottomOf="@id/field_5"
+            app:layout_constraintLeft_toRightOf="@id/field_7"
+            app:layout_constraintRight_toLeftOf="@id/field_9" />
+
+        <Button
+            android:tag="8"
+            android:id="@+id/field_9"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:backgroundTint="@color/colorTextDark"
+            android:textColor="@color/colorText"
+            android:textSize="28sp"
+            app:layout_constraintTop_toBottomOf="@id/field_6"
+            app:layout_constraintLeft_toRightOf="@id/field_8"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
