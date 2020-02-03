@@ -8,6 +8,7 @@ Multi-platform Tic-tac-toe game, available for Web, Android and iOS.
 This multi-platform project consist of several platform sub-projects:
 
 - Android (`androidApp/`)
+- iOS (`iosApp/`)
 - JS (`shared/src/jsMain`)
 
 Platform shared code is located in `shared/src/commonMain`.
@@ -15,11 +16,22 @@ Platform shared code is located in `shared/src/commonMain`.
 
 ## Development
 
-Use Android Studio (3.5.3 or later).
 
 ### Android
 
-Run Project on emulator or real device.
+Use Android Studio (3.5.3 or later) and open `androidApp` module. 
+
+### iOS
+
+In `iosApp/` directory, install pods with `pod install`.
+Use Xcode and open `iosApp/TicTacToe.xcworkspace`.
+
+#### Useful gradle tasks
+
+- *podspec*
+
+Generates `shared.podspec` for use in Cocoapods project
+ 
 
 ### JS
 

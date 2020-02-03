@@ -2,8 +2,11 @@ import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
 
 plugins {
     id "org.jetbrains.kotlin.multiplatform"
+    id "org.jetbrains.kotlin.native.cocoapods"
     id "com.android.library"
 }
+
+version = "1.0"
 
 android {
     compileSdkVersion 29
@@ -33,6 +36,8 @@ repositories {
 
 kotlin {
     android()
+
+    ios() // iosArm64 and iosX64
 
     js {
         def outDestination = new File(rootProject.rootDir.toString() + "/docs/")
@@ -71,6 +76,12 @@ kotlin {
                 implementation kotlin('test-annotations-common')
             }
         }
+    }
+
+
+    cocoapods {
+        summary = "Shared library for TicTacToe game"
+        homepage = "https://github.com/Krizzu/tictactoe-multiplatform"
     }
 }
 

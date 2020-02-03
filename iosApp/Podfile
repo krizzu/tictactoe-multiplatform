@@ -1,0 +1,9 @@
+platform :ios, '10.0'
+
+target 'TicTacToe' do
+  use_frameworks!
+
+  pod 'shared', :path => '/Users/krizzu/Documents/projects/tictactoe-multiplatform/shared'
+
+
+end
